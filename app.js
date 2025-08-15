@@ -1,31 +1,45 @@
-// Declaración de variables y lista para almacenar nombres
-let ListaNombres = [];
-let NombreSecreto;
+//Declaración de la lista y variables
+let ListaAmigos = [];
+let NombreAmigo;
 
 
-//Funcion que agrega a la lista los nombres generados
-
-function agregarAmigo(){
-    NombreGenerado = document.getElementById("amigo").value;
-    //Validamos si esta vacio el input
-    if(NombreGenerado.trim()=== ""){
-        alert("Ingresa un nombre");
+//Agregamos a la lista el nombre escrito
+function agregarAmigo() {
+    NombreAmigo = document.getElementById("amigo").value;
+    //Validamos que no este vacio
+    if (NombreAmigo.trim()===""){
+        alert("Ingresa un nombre valido");
     }else{
-        ListaNombres.push(NombreGenerado);
+        ListaAmigos.push(NombreAmigo);
         document.querySelector("#amigo").value = "";
+        mostrarLista();
     }
 }
 
 
-//Funcion para sortear los amigos
+//Mostramos la lista por medio los elementos de una tabla, mediante el DOM
+function mostrarLista(){
+    let elementoLista = document.getElementById("listaAmigos");
+    elementoLista.innerHTML = "";
+
+    for (let index = 0; index < ListaAmigos.length; index++) {
+        const element = ListaAmigos[index];
+        
+        let listaHTML = document.createElement("li");
+        listaHTML.textContent = element;
+        elementoLista.appendChild(listaHTML);
+    }
+}
+
+//Sorteamos los nombre por medio de un random
 function sortearAmigo(){
-    let cantidadAmigos = ListaNombres.length;
-    if (cantidadAmigos === 0){
-        alert("Es necesario un nombre antes de sortear");
+    let cantidadAmigos = ListaAmigos.length;
+
+    if (cantidadAmigos ===0){
+        alert("Inserta un nombre antes de sortear");
     }else{
         let indiceAmigo = Math.floor(Math.random()*cantidadAmigos);
-        let resultado = ListaNombres(indiceAmigo);
-        alert(`El nombre sorteado es: ${resultado}`);
+        let resultadoHTML = document.querySelector("#resultado");
+        resultadoHTML.innerHTML = ListaAmigos[indiceAmigo];
     }
 }
-
