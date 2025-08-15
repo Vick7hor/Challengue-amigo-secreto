@@ -1,13 +1,31 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+// Declaración de variables y lista para almacenar nombres
 let ListaNombres = [];
 let NombreSecreto;
-let NombreGenerado;
 
-function agregarAmigo(NombreGenerado){
-    ListaNombres.includes(NombreGenerado)
-    return NombreGenerado;
+
+//Funcion que agrega a la lista los nombres generados
+
+function agregarAmigo(){
+    NombreGenerado = document.getElementById("amigo").value;
+    //Validamos si esta vacio el input
+    if(NombreGenerado.trim()=== ""){
+        alert("Ingresa un nombre");
+    }else{
+        ListaNombres.push(NombreGenerado);
+        document.querySelector("#amigo").value = "";
+    }
 }
 
-console.log(NombreGenerado);
-console.log(agregarAmigo);
+
+//Funcion para sortear los amigos
+function sortearAmigo(){
+    let cantidadAmigos = ListaNombres.length;
+    if (cantidadAmigos === 0){
+        alert("Es necesario un nombre antes de sortear");
+    }else{
+        let indiceAmigo = Math.floor(Math.random()*cantidadAmigos);
+        let resultado = ListaNombres(indiceAmigo);
+        alert(`El nombre sorteado es: ${resultado}`);
+    }
+}
 
