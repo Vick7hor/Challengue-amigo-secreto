@@ -12,7 +12,7 @@
     <img align="center" width="810" height="212" alt="image" src="https://github.com/user-attachments/assets/cc067412-de62-4167-b460-744e1161efbe" />
 
   
-  - Una vez ingresados todos los nombres da clíc a la opción de sortear para generar un sorteo aleatorio de los nombres ingresados.
+  - Una vez ingresados todos los nombres da clíc a la opción de "sortear" para generar un sorteo aleatorio de los nombres ingresados.
 <img align="center" width="432" height="133" alt="image" src="https://github.com/user-attachments/assets/2fb3dfd0-5712-4e38-939f-375b9ba550c1" />
 <br>
 <br>
@@ -20,4 +20,5 @@
 <br>
 <br>
 <br>
-Soy conciente de que la funcionalidad puede ser mejor, espero desarrollar mis habilidades y poder proporcionar 
+- El sorteo se mostrara de la siguiente manera:
+<img width="1081" height="857" alt="image" src="https://github.com/user-attachments/assets/8de65408-a6f5-403c-b7f1-c50f75313140" />
